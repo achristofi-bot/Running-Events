@@ -41,9 +41,9 @@ a{color:var(--accent)}
 </style></head><body><div class="wrap">
 <h1>Running events – Hemel Hempstead area</h1>
 <p class="intro">Races near Hemel Hempstead.</p>
-<div class="top"><div class="upd">Updated Sun 15 Nov, 22:55</div>
+<div class="top"><div class="upd">Updated Sun 15 Nov, 22:57</div>
 <div class="area"><button class="a on" data-a="local">Herts, Beds &amp; Bucks</button><button class="a" data-a="all">Within 30 miles</button></div></div>
-<div class="filters"><div class="frow"><button class="f" data-r="Short">Short<small>5–8 km</small></button><button class="f" data-r="10K">10K<small>9–12 km</small></button><button class="f" data-r="Long">Long<small>13–17 km</small></button><button class="f" data-r="Half">Half<small>18–21 km</small></button><button class="f" data-r="Marathon">Marathon<small>22–42 km</small></button></div><div class="frow"><button class="f on" data-r="">All<small>everything</small></button><button class="f" data-r="Fun run">Kids<small>fun runs</small></button><button class="f" data-r="Challenges">Challenges<small>monthly</small></button><button class="f" data-r="Parkrun">Parkrun<small>Saturdays</small></button></div></div>
+<div class="filters"><div class="frow"><button class="f" data-r="Short">Short<small>5–8 km</small></button><button class="f" data-r="10K">10K<small>9–12 km</small></button><button class="f" data-r="Long">Long<small>13–17 km</small></button><button class="f" data-r="Half">Half<small>18–21 km</small></button><button class="f" data-r="Marathon">Marathon<small>22–42 km</small></button></div><div class="frow"><button class="f on" data-r="">All<small>everything</small></button><button class="f" data-r="Fun run">Kids<small>fun runs</small></button><button class="f" data-r="Challenges">Challenges<small>monthly</small></button><button class="f" data-r="Parkrun">Parkrun<small>Saturdays</small></button><button class="f" data-r="Social">Social<small>clubs</small></button></div></div>
 <h3 class="mh">November 2026</h3><div class="ev ch" data-r="Challenges" data-l="1">
   <div class="date"><span>Nov</span><b>1</b></div>
   <div class="main"><div class="t">The Big Ballsy Run</div>
@@ -711,6 +711,23 @@ a{color:var(--accent)}
   <div class="main"><div class="t">Sunny Hill parkrun</div><div class="sub">Sunny Hill Park · 14.8 mi (23.8 km) from Hemel town centre · every Saturday, 9am · free</div></div>
   <div class="side"><a class="book" href="https://www.parkrun.org.uk/sunnyhill/" target="_blank" rel="noopener">Details</a></div>
 </div>
+<h3 class="mh">Clubs &amp; social runs</h3><div class="ev" data-r="Social" data-l="1">
+  <div class="main"><div class="t">Runner&#x27;s High Club</div><div class="sub">Social run club · Sundays 9:30am</div>
+  <div class="sub">Apsley Lock, Hemel Hempstead</div><div class="sub">All paces welcome.</div></div>
+  <div class="side"><a class="book" href="https://www.instagram.com/runnershighc/" target="_blank" rel="noopener">Instagram</a></div>
+</div><div class="ev" data-r="Social" data-l="1">
+  <div class="main"><div class="t">Gade Valley Harriers</div><div class="sub">Running club · Tuesdays &amp; Thursdays 6:45pm</div>
+  <div class="sub">Boxmoor Cricket Club, St John&#x27;s Road, Hemel Hempstead</div><div class="sub">All abilities, structured sessions, post-run drinks. Learn to Run beginners&#x27; course each May.</div></div>
+  <div class="side"><a class="book" href="https://www.gadevalleyharriers.co.uk/" target="_blank" rel="noopener">Website</a></div>
+</div><div class="ev" data-r="Social" data-l="1">
+  <div class="main"><div class="t">Dacorum &amp; Tring AC Road Runners</div><div class="sub">Running club · Tuesdays 6:45pm (intervals) &amp; Thursdays 7pm (group runs)</div>
+  <div class="sub">Tue: Gadebridge Park (summer) / Watergardens car park (winter). Thu: Jarman Park track, Hemel Hempstead</div><div class="sub">Thursday pace groups from about 3 miles for beginners. Try it for a couple of weeks before joining.</div></div>
+  <div class="side"><a class="book" href="https://www.dacorumac.org.uk/dact/?p=18" target="_blank" rel="noopener">Website</a></div>
+</div><div class="ev" data-r="Social" data-l="1">
+  <div class="main"><div class="t">Tring Running Club</div><div class="sub">Running club · Mondays (coached track) &amp; Wednesdays 7pm (trail run)</div>
+  <div class="sub">Mon: Jarman Park track, Hemel Hempstead. Wed: Tring Cricket Club</div><div class="sub">All paces, bar after the Wednesday run. Two-month free trial.</div></div>
+  <div class="side"><a class="book" href="https://www.tringrunningclub.org.uk/" target="_blank" rel="noopener">Website</a></div>
+</div>
 </div>
 <script>
 let cur='', area='local';
@@ -723,7 +740,7 @@ document.querySelectorAll('.a').forEach(b=>b.onclick=()=>{
   area=b.dataset.a; show();
 });
 function show(){
-  const own=['Challenges','Parkrun'], r=cur;
+  const own=['Challenges','Parkrun','Social'], r=cur;
   document.querySelectorAll('.ev').forEach(e=>{const g=e.dataset.r.split('|');
     const off=(r ? !g.includes(r) : g.some(x=>own.includes(x))) || (area==='local' && e.dataset.l==='0');
     e.classList.toggle('hide', off);});
